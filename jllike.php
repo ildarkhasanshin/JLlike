@@ -52,13 +52,13 @@ class plgContentjllike extends JPlugin {
           $doc->addScriptDeclaration($pathbase);
 
           $doc->addScript("http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js");
-          $doc->addScript("plugins/content/jllike/js/buttons.js?5");
+          $doc->addScript("plugins/content/jllike/js/buttons.min.js?5");
           $doc->addCustomTag('<script type="text/javascript">var jqlike = jQuery.noConflict();</script>');
           // $doc->addScript("plugins/content/jllike/js/pioneers-scroll.js?5");
 
           // $doc->addScript("jQuery(document).ready(function($) {$('.likes-block .like').socialButton();$.scrollToButton('hash', 1000);}); ");
           // $doc->addCustomTag("<script >jq = jQuery.noConflict();</script>");
-          $doc->addStyleSheet("plugins/content/jllike/js/buttons.css");
+          $doc->addStyleSheet("plugins/content/jllike/js/buttons.min.css");
 
           $titlefc = JText::_('PLG_JLLIKE_TITLE_FC');
           $titlevk = JText::_('PLG_JLLIKE_TITLE_VK');
@@ -133,8 +133,6 @@ HTML;
       } else {
         $article->text = str_replace("{jllike}", "", $article->text);
       }
-
     }
   }
-
 }
